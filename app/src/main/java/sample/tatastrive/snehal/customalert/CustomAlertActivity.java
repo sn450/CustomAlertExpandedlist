@@ -29,12 +29,12 @@ private Button button;
                     public void onClick(View v1) {
                         dialog.dismiss();
                         Toast.makeText(CustomAlertActivity.this,"Dismissed..!!",Toast.LENGTH_LONG);
-
+                        Intent intent = new Intent(CustomAlertActivity.this,ExpandedListViewActivity.class);
+                        startActivity(intent);
                     }
                 });
-                //
-                Intent intent = new Intent(CustomAlertActivity.this,Main3Activity.class);
-                startActivity(intent);
+
+
                 dialog.show();
 
             }
