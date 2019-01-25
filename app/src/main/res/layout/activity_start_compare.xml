@@ -1,48 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:gravity="center"
-    android:orientation="vertical"
-    android:backgroundTint="#f9b6b6"
-    android:padding="20dp"
-    tools:context=".StartActivityCompareActivity">
+    android:layout_height="match_parent" >
 
     <EditText
-        android:id="@+id/ed1"
-        android:hint="Enter the name"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
-
-    <LinearLayout
-
-        android:layout_width="match_parent"
+        android:id="@+id/etSend"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:orientation="horizontal">
+        android:ems="20"
+        android:inputType="text"
+        tools:ignore="LabelFor" />
 
-        <Button
-            android:id="@+id/but1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Start Activity for Result" />
-
-        <Button
-            android:id="@+id/but2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Start Activity" />
-    </LinearLayout>
-
-
-    <TextView
-        android:id="@+id/text"
+    <Button
+        android:id="@+id/btnStart"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView"
-        android:textSize="24sp"
-        android:textStyle="bold" />
+        android:layout_below="@+id/etSend"
+        android:layout_alignParentEnd="true"
+        android:text="Start Activity " />
 
-</LinearLayout>
+    <Button
+        android:id="@+id/btnResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/btnStart"
+        android:layout_toStartOf="@+id/btnStart"
+        android:text="Start Activity for Result" />
+
+    <TextView
+        android:id="@+id/tvGot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnResult"
+        android:text="Start Activity for Result"
+        android:textColor="@color/colorPrimary"
+        android:textSize="24sp" />
+
+
+
+</RelativeLayout>
